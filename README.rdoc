@@ -1,0 +1,88 @@
+== README
+
+This README would normally document whatever steps are necessary to get the
+application up and running.
+
+Things you may want to cover:
+
+* Ruby version
+
+* System dependencies
+
+* Configuration
+
+* Database creation
+
+* Database initialization
+
+* How to run the test suite
+
+* Services (job queues, cache servers, search engines, etc.)
+
+* Deployment instructions
+
+* ...
+
+
+Please feel free to use a different markup language if you do not plan to run
+<tt>rake doc:app</tt>.
+
+## Create project without test 
+
+$ rails new tasks -T
+
+## Added testing gems
+
+gem 'turn'
+gem 'rspec-rails'
+gem 'capybara'
+gem 'guard-rspec'
+
+## list all rails generator
+
+$ rails g
+
+
+## Install rspec
+
+$rails g rspec:install
+
+## Intitialize Guard to auto run rspec tests
+
+$ guard init rspec
+
+# to do test run on guard
+
+$ guard  # this will automatically run my tests
+
+# gem install rb-fsevent
+
+## create intergration test
+
+$ rails g integration_test tasks
+
+## create tasks controller
+
+$ rails g controller Tasks index
+
+## create task model
+
+$ rails g model Task task:string
+
+$ rake db:migrate
+
+## Testing db in rails console
+
+$ rails c
+
+> Task # this will show you the Task model schema
+
+> Task.all # select * from tasks
+
+> Task.create(task: 'Go to the store') #create a record
+
+> Task.find(1) #Find record where id=1
+
+## create rspec features test for Task
+
+$ rails g rspec:feature test
